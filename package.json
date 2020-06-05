@@ -1,16 +1,17 @@
 {
   "name": "ag-charts-react-example",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run hash",
+    "hash": "sh ./hashDirectory.sh > .hash",
     "test": "CI=true react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "ag-charts-community": "~1.1.0",
-    "ag-charts-react": "~1.1.0",
+    "ag-charts-community": "~1.2.0",
+    "ag-charts-react": "~1.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
