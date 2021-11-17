@@ -2,17 +2,6 @@ import React, {useState} from 'react';
 import {AgChartsReact} from 'ag-charts-react';
 import './App.css';
 
-/*
-const NumericInput = initialValue => {
-    const [value, setValue] = useState(initialValue);
-    const onChange = (
-        event => setValue(isNaN(event.currentTarget.value) ? initialValue : parseInt(event.currentTarget.value))
-    );
-
-    return {value, onChange};
-};
-*/
-
 const IncreaseDecreaseInput = (label, initialValue) => {
     const [value, setValue] = useState(initialValue);
     return {
@@ -36,7 +25,7 @@ const IncreaseDecreaseInput = (label, initialValue) => {
 
 
 function App() {
-    const {value: markerSize, control: MarkerSizeControl} = IncreaseDecreaseInput("Marker Size", 25);
+    const {value: markerSize, control: MarkerSizeControl} = IncreaseDecreaseInput("Marker Size", 10);
 
     return (
         <div>
@@ -62,11 +51,11 @@ function App() {
                     }],
                     series: [{
                         xKey: 'month',
-                        yKey: 'revenue'
-                    }],
-                    legend: {
-                        markerSize: markerSize
-                    }
+                        yKey: 'revenue',
+                        marker: {
+                            size: markerSize
+                        }
+                    }]
                 }}
             />
         </div>
