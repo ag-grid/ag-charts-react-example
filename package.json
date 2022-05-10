@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && npm run hash",
+    "build-prod": "npm run build",
     "hash": "sh ./hashDirectory.sh > .hash",
     "test": "CI=true react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
