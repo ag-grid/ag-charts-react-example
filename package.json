@@ -1,10 +1,10 @@
 {
   "name": "ag-charts-react-example",
-  "version": "7.3.0",
+  "version": "8.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && npm run hash",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build && npm run hash",
     "build-prod": "npm run build",
     "hash": "sh ./hashDirectory.sh > .hash",
     "test": "CI=true react-scripts test --passWithNoTests",
@@ -14,8 +14,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "ag-charts-community": "~7.3.0",
-    "ag-charts-react": "~7.3.0",
+    "ag-charts-community": "~8.0.0",
+    "ag-charts-react": "~8.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.0"
