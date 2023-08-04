@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "buildx": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build && npm run hash",
+    "buildx": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "build-prodx": "npm run build",
-    "hash": "sh ./hashDirectory.sh > .hash",
     "test": "CI=true react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
